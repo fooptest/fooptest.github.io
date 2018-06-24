@@ -30,6 +30,10 @@ console.log(i);
 async function setDate(){
     console.log("beginning sd");
     let v=await include();
+    var thenProm = v.then(function(value){
+    console.log("this gets called after the end of the main stack. the value received and returned is: " + value);
+    return value;
+});
     console.log("await over");
     var d = new Date();
 var day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
