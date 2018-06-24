@@ -1,4 +1,4 @@
-function setDate() {
+aysnc function setDate() {
     await include();
     var d = new Date();
 var day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
