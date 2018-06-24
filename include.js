@@ -25,7 +25,7 @@ function include() {
         }
 console.log(i);
     }
-   console.log("should return");
+   console.log("should return"); resolve("SUCCESS")
 }).then(function(result) { console.log("then");
     var d = new Date();
 var day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
