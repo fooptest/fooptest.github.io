@@ -23,7 +23,7 @@ function include() {
             xhttp.send();
             //return;
         }
-
+console.log(i);
     }
    
 });}
