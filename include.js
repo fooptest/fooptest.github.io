@@ -25,5 +25,4 @@ function include() {
 
     }
 }
-
-include(); // initial function call
+ // initial function call
