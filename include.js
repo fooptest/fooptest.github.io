@@ -1,4 +1,4 @@
-function include() {
+async function include() {
     let file, xhttp;
     let allElements = document.getElementsByTagName('*'); //get all elements on the page
 
@@ -24,6 +24,7 @@ function include() {
         }
 
     }
+    return;
 }
 async function setDate(){
     let v=await include();
