@@ -28,7 +28,9 @@ function include() {
    
 });}
 async function setDate(){
+    console.log("beginning sd");
     let v=await include();
+    console.log("await over");
     var d = new Date();
 var day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
