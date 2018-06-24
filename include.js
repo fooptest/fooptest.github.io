@@ -26,19 +26,18 @@ function include() {
 console.log(i);
     }
    console.log("should return");
-});}
-async function setDate(){
-    console.log("beginning sd");
-    let v=await include();
-    var thenProm = v.then(function(value){
-    console.log("this gets called after the end of the main stack. the value received and returned is: " + value);
-    return value;
-});
-    console.log("await over");
+}).then(function(result) {
     var d = new Date();
 var day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 document.getElementById("currentdate").innerHTML = day[d.getDay()] + ", " + d.getDate() + " " + month[d.getMonth()] + " " + d.getFullYear();
+  });}
+async function setDate(){
+    console.log("beginning sd");
+    let v=await include();
+    
+    console.log("await over");
+    
     return v;
                   }
 
