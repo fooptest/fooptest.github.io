@@ -1,5 +1,5 @@
 function include() {
-  return new Promise((resolve, reject) => {
+ // return new Promise((resolve, reject) => {
     let file, xhttp;
     let allElements = document.getElementsByTagName('*'); //get all elements on the page
 
@@ -16,30 +16,31 @@ function include() {
                         allElements[i].innerHTML = "Page not found!";
                     }
                     allElements[i].removeAttribute('includefile');
-                    //include();
+                    include();
                 }
             }
             xhttp.open('GET', 'includes/' + file, true); // matching file names in includes folder
             xhttp.send();
-            //return;
+            return;
         }
-console.log(i);
+//console.log(i);
     }
-   console.log("should return"); resolve("SUCCESS")
-});}
-async function setDate(){
-    console.log("beginning sd");
-    let v=await include();
+   //console.log("should return"); resolve("SUCCESS")
+}
+window.onload=function(){
     
-    console.log("await over");
-   console.log("then");
+    //console.log("beginning sd");
+    //let v=await include();
+    
+    //console.log("await over");
+  // console.log("then");
     var d = new Date();
 var day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 document.getElementById("currentdate").innerHTML = day[d.getDay()] + ", " + d.getDate() + " " + month[d.getMonth()] + " " + d.getFullYear();
   
     
-    return v;
+    //return v;
                   }
 
  // initial function call
